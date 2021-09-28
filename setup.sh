@@ -31,11 +31,11 @@ cd /root/vpn-installer
 GitUser="ytube2"
 #wget https://github.com/${GitUser}/
 
-wget https://raw.githubusercontent.com/${GitUser}/a/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/${GitUser}/a/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && sed -i -e 's/\r$//' ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget https://raw.githubusercontent.com/${GitUser}/a/main/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh
 wget https://raw.githubusercontent.com/${GitUser}/a/main/go.sh && chmod +x go.sh && sed -i -e 's/\r$//' go.sh && screen -S go ./go.sh
-wget https://raw.githubusercontent.com/${GitUser}/a/main/websocket.sh && chmod +x websocket.sh && screen -S websocket ./websocket.sh
-wget https://raw.githubusercontent.com/${GitUser}/a/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/${GitUser}/a/main/websocket.sh && chmod +x websocket.sh && sed -i -e 's/\r$//' websocket.sh && screen -S websocket ./websocket.sh
+wget https://raw.githubusercontent.com/${GitUser}/a/main/ipsec.sh && chmod +x ipsec.sh && sed -i -e 's/\r$//' ipsec.sh && screen -S ipsec ./ipsec.sh
 apt-get install unzip
 rm -f /root/ssh-vpn.sh
 rm -f /root/websocket.sh
